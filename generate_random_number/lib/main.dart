@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'dart:math';
 
+import 'package:generate_random_number/randomNumber.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -17,28 +19,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            body: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-          Container(
-              margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-              // ignore: deprecated_member_use
-              child: RaisedButton(
-                onPressed: () => randomNumber(),
-                child: Text(
-                  'Generate',
-                  style: TextStyle(fontSize: 20),
-                ),
-                textColor: Colors.white,
-                color: Colors.black,
-                padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-              )),
-          Container(
-            child: Text("data"),
-          ),
-        ]))));
+    return MaterialApp(home: Scaffold(body: RandomNumber()));
   }
 }
