@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
 
     int minValue = 10;
     int maxValue = 200;
-    int result = minValue + random.nextInt(maxValue - minValue);
+    int resultValue = minValue + random.nextInt(maxValue - minValue);
 
-    print(result);
+    //print(resultValue);
   }
 
   @override
@@ -25,16 +25,20 @@ class MyApp extends StatelessWidget {
                     children: <Widget>[
           Container(
               margin: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+              // ignore: deprecated_member_use
               child: RaisedButton(
                 onPressed: () => randomNumber(),
                 child: Text(
-                  'Click for Generate Number',
+                  'Generate',
                   style: TextStyle(fontSize: 20),
                 ),
                 textColor: Colors.white,
                 color: Colors.black,
                 padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
               )),
+          Container(
+            child: Text("data"),
+          ),
         ]))));
   }
 }
