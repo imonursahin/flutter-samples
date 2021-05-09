@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
 
     int minValue = 10;
     int maxValue = 200;
-    int resultValue = minValue + random.nextInt(maxValue - minValue);
+    int result = minValue + random.nextInt(maxValue - minValue);
 
-    //print(resultValue);
+    print(result);
   }
 
   @override
